@@ -1,0 +1,314 @@
+
+#TURTLE RACE GAME USING TURTLE IN PYTHON
+
+
+# IMPORTING ALL THE LIBRARIES
+
+import turtle
+from turtle import *
+import time
+from random import randint
+
+
+
+# WINDOW SETUP
+
+turtle.setup(1000, 1000)
+title('TURTLE RACE GAME')
+bgcolor('black')
+speed(0)
+
+#Text On Screen
+
+penup()
+goto(-100,460)
+color('white')
+turtle.write("TURTLE RACE", font=("High Tower Text",25,"italic"))
+
+
+#MAKE PLAY FIELD
+
+goto(-460,460)
+pendown()
+color("#D7C513")
+begin_fill()
+for i in range(2):
+    forward(920)
+    right(90)
+    forward(920)
+    right(90)
+end_fill()
+penup()
+
+
+#MAKE FINSH LINE
+
+temp = 20
+shape('square')
+penup()
+
+color('white')
+for i in range(21):
+    goto((-400+(i*temp*2)),420)
+    stamp()
+for i in range(20):
+    goto((-380+(i*temp*2)),400)
+    stamp()
+color('black')
+for i in range(20):
+    goto((-380+(i*temp*2)),420)
+    stamp()
+for i in range(21):
+    goto((-400+(i*temp*2)),400)
+    stamp()
+
+
+# CREATE TURTLES
+
+
+tRed = Turtle()
+tRed.color("Red")
+tRed.shape("turtle")
+tRed.shapesize(1.5)
+tRed.penup()
+tRed.goto(-360, -410)
+tRed.left(90)
+tRed.pendown()
+
+tGreen = Turtle()
+tGreen.color("Green")
+tGreen.shape("turtle")
+tGreen.shapesize(1.5)
+tGreen.penup()
+tGreen.goto(-360+180,-410)
+tGreen.left(90)
+tGreen.pendown()
+
+tCyan = Turtle()
+tCyan.color("Cyan")
+tCyan.shape("turtle")
+tCyan.shapesize(1.5)
+tCyan.penup()
+tCyan.goto(-360+180*2, -410)
+tCyan.left(90)
+tCyan.pendown()
+
+tViolet = Turtle()
+tViolet.color("#AB19AB")
+tViolet.shape("turtle")
+tViolet.shapesize(1.5)
+tViolet.penup()
+tViolet.goto(-360+180*3,-410)
+tViolet.left(90)
+tViolet.pendown()
+
+tBrown = Turtle()
+tBrown.color("Brown")
+tBrown.shape("turtle")
+tBrown.shapesize(1.5)
+tBrown.penup()
+tBrown.goto(-360+180*4,-410)
+tBrown.left(90)
+tBrown.pendown()
+
+time.sleep(1)
+
+
+# START RACE
+
+while(tRed.ycor()<400 and tGreen.ycor()<400 and tCyan.ycor()<400 and tViolet.ycor()<400 and tBrown.ycor()<400):
+    tRed.forward(randint(1,10))
+    tGreen.forward(randint(1,10))
+    tCyan.forward(randint(1,10))
+    tViolet.forward(randint(1,10))
+    tBrown.forward(randint(1,10))
+        
+
+#Declare Winner
+
+if(tRed.ycor()>tGreen.ycor() and tRed.ycor()>tCyan.ycor() and tRed.ycor()>tViolet.ycor() and tRed.ycor()>tBrown.ycor()):
+    print("Red Turtle is the Winner")
+    for i in range(90):
+        tRed.right(4)
+        tRed.shapesize(3)
+elif(tGreen.ycor()>tRed.ycor() and tGreen.ycor()>tCyan.ycor() and tGreen.ycor()>tViolet.ycor() and tGreen.ycor()>tBrown.ycor()):
+    print("Green Turtle is the Winner")
+    for i in range(90):
+        tGreen.right(4)
+        tGreen.shapesize(3)
+elif(tViolet.ycor()>tGreen.ycor() and tViolet.ycor()>tCyan.ycor() and tViolet.ycor()>tRed.ycor() and tViolet.ycor()>tBrown.ycor()):
+    print("Violet Turtle is the Winner")
+    for i in range(90):
+        tViolet.right(4)
+        tViolet.shapesize(3)
+elif(tCyan.ycor()>tGreen.ycor() and tCyan.ycor()>tRed.ycor() and tCyan.ycor()>tViolet.ycor() and tCyan.ycor()>tBrown.ycor()):
+    print("Cyan Turtle is the Winner")
+    for i in range(90):
+        tCyan.right(4)
+        tCyan.shapesize(3)
+else:
+    print("Brown Turtle is the Winner")
+    for i in range(90):
+        tBrown.right(4)
+        tBrown.shapesize(3)
+
+
+
+turtle.done()
+
+#TURTLE RACE GAME USING TURTLE IN PYTHON
+
+
+# IMPORTING ALL THE LIBRARIES
+
+import turtle
+from turtle import *
+import time
+from random import randint
+
+
+
+# WINDOW SETUP
+
+turtle.setup(1000, 1000)
+title('TURTLE RACE GAME')
+bgcolor('black')
+speed(0)
+
+#Text On Screen
+
+penup()
+goto(-100,460)
+color('white')
+turtle.write("TURTLE RACE", font=("High Tower Text",25,"italic"))
+
+
+#MAKE PLAY FIELD
+
+goto(-460,460)
+pendown()
+color("#D7C513")
+begin_fill()
+for i in range(2):
+    forward(920)
+    right(90)
+    forward(920)
+    right(90)
+end_fill()
+penup()
+
+
+#MAKE FINSH LINE
+
+temp = 20
+shape('square')
+penup()
+
+color('white')
+for i in range(21):
+    goto((-400+(i*temp*2)),420)
+    stamp()
+for i in range(20):
+    goto((-380+(i*temp*2)),400)
+    stamp()
+color('black')
+for i in range(20):
+    goto((-380+(i*temp*2)),420)
+    stamp()
+for i in range(21):
+    goto((-400+(i*temp*2)),400)
+    stamp()
+
+
+# CREATE TURTLES
+
+
+tRed = Turtle()
+tRed.color("Red")
+tRed.shape("turtle")
+tRed.shapesize(1.5)
+tRed.penup()
+tRed.goto(-360, -410)
+tRed.left(90)
+tRed.pendown()
+
+tGreen = Turtle()
+tGreen.color("Green")
+tGreen.shape("turtle")
+tGreen.shapesize(1.5)
+tGreen.penup()
+tGreen.goto(-360+180,-410)
+tGreen.left(90)
+tGreen.pendown()
+
+tCyan = Turtle()
+tCyan.color("Cyan")
+tCyan.shape("turtle")
+tCyan.shapesize(1.5)
+tCyan.penup()
+tCyan.goto(-360+180*2, -410)
+tCyan.left(90)
+tCyan.pendown()
+
+tViolet = Turtle()
+tViolet.color("#AB19AB")
+tViolet.shape("turtle")
+tViolet.shapesize(1.5)
+tViolet.penup()
+tViolet.goto(-360+180*3,-410)
+tViolet.left(90)
+tViolet.pendown()
+
+tBrown = Turtle()
+tBrown.color("Brown")
+tBrown.shape("turtle")
+tBrown.shapesize(1.5)
+tBrown.penup()
+tBrown.goto(-360+180*4,-410)
+tBrown.left(90)
+tBrown.pendown()
+
+time.sleep(1)
+
+
+# START RACE
+
+while(tRed.ycor()<400 and tGreen.ycor()<400 and tCyan.ycor()<400 and tViolet.ycor()<400 and tBrown.ycor()<400):
+    tRed.forward(randint(1,10))
+    tGreen.forward(randint(1,10))
+    tCyan.forward(randint(1,10))
+    tViolet.forward(randint(1,10))
+    tBrown.forward(randint(1,10))
+        
+
+#Declare Winner
+
+if(tRed.ycor()>tGreen.ycor() and tRed.ycor()>tCyan.ycor() and tRed.ycor()>tViolet.ycor() and tRed.ycor()>tBrown.ycor()):
+    print("Red Turtle is the Winner")
+    for i in range(90):
+        tRed.right(4)
+        tRed.shapesize(3)
+elif(tGreen.ycor()>tRed.ycor() and tGreen.ycor()>tCyan.ycor() and tGreen.ycor()>tViolet.ycor() and tGreen.ycor()>tBrown.ycor()):
+    print("Green Turtle is the Winner")
+    for i in range(90):
+        tGreen.right(4)
+        tGreen.shapesize(3)
+elif(tViolet.ycor()>tGreen.ycor() and tViolet.ycor()>tCyan.ycor() and tViolet.ycor()>tRed.ycor() and tViolet.ycor()>tBrown.ycor()):
+    print("Violet Turtle is the Winner")
+    for i in range(90):
+        tViolet.right(4)
+        tViolet.shapesize(3)
+elif(tCyan.ycor()>tGreen.ycor() and tCyan.ycor()>tRed.ycor() and tCyan.ycor()>tViolet.ycor() and tCyan.ycor()>tBrown.ycor()):
+    print("Cyan Turtle is the Winner")
+    for i in range(90):
+        tCyan.right(4)
+        tCyan.shapesize(3)
+else:
+    print("Brown Turtle is the Winner")
+    for i in range(90):
+        tBrown.right(4)
+        tBrown.shapesize(3)
+
+
+
+turtle.done()
